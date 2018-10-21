@@ -61,8 +61,9 @@ app.use(function(req, res, next) {
 //     next(err);
 // });
 
-app.listen(3000,()=>{
-    console.log("litening on port "+ chalk.green('3000'));
+let port = process.env.PORT || 3000
+app.listen(port,()=>{
+    console.log("litening on port "+ chalk.green(port));
 
 })
 
